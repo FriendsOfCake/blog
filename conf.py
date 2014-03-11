@@ -8,29 +8,29 @@ import tinkerer.paths
 # **************************************************************
 
 # Change this to the name of your blog
-project = 'My blog'
+project = 'Friends of Cake'
 
 # Change this to the tagline of your blog
-tagline = 'Add intelligent tagline here'
+tagline = 'The Cake is was not a Lie'
 
 # Change this to the description of your blog
-description = 'This is an awesome blog'
+description = 'This blog compiles the writings of many developers who are passionate about developing with CakePHP and programming in general'
 
 # Change this to your name
-author = 'Winston Smith'
+author = 'FriendsOfCake'
 
 # Change this to your copyright string
-copyright = '1984, ' + author
+copyright = '2014, ' + author
 
 # Change this to your blog root URL (required for RSS feed)
-website = 'http://127.0.0.1/blog/html/'
+website = 'http://127.0.0.1:8000/blog/html/'
 
 # **************************************************************
 # More tweaks you can do
 # **************************************************************
 
 # Add your Disqus shortname to enable comments powered by Disqus
-disqus_shortname = None
+disqus_shortname = 'friendsofcake'
 
 # Change your favicon (new favicon goes in _static directory)
 html_favicon = 'tinkerer.ico'
@@ -52,7 +52,7 @@ rss_generate_full_posts = False
 posts_per_page = 10
 
 # Character use to replace non-alphanumeric characters in slug
-slug_word_separator = '_'
+slug_word_separator = '-'
 
 # **************************************************************
 # Edit lines below to further customize Sphinx build
