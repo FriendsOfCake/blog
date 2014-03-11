@@ -11,7 +11,7 @@ import tinkerer.paths
 project = 'Friends of Cake'
 
 # Change this to the tagline of your blog
-tagline = 'The Cake is was not a Lie'
+tagline = 'The Cake was not a Lie'
 
 # Change this to the description of your blog
 description = 'This blog compiles the writings of many developers who are passionate about developing with CakePHP and programming in general'
