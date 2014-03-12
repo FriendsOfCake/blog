@@ -1,8 +1,7 @@
 A group of cake-eating friends
 ==============================
 
-wow, such blog, much word, amaze !
-
+To be finished
 
 .. author:: José Lorenzo Rodríguez
 .. categories:: none
