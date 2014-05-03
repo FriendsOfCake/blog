@@ -23,7 +23,7 @@ author = 'FriendsOfCake'
 copyright = '2014, ' + author
 
 # Change this to your blog root URL (required for RSS feed)
-website = 'http://127.0.0.1:8000/blog/html/'
+website = 'http://127.0.0.1:8000/'
 
 # **************************************************************
 # More tweaks you can do
@@ -89,5 +89,10 @@ version = tinkerer.__version__
 release = tinkerer.__version__
 html_title = project
 html_use_index = False
-html_show_sourcelink = False
+html_show_sourcelink = True
 html_add_permalinks = None
+
+from sphinx.highlighting import lexers
+from pygments.lexers.web import PhpLexer
+
+lexers['phpinline'] = PhpLexer(startinline=True)
