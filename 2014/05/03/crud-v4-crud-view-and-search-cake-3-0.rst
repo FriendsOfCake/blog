@@ -62,7 +62,7 @@ This page contains the normal paginated list of records, and the list of tables
 in the menu to the left.
 
 It additionally features some filtering options, powered by the
-`FriendsOfCake/search plugin <github.com/friendsofcake/search>`_
+`FriendsOfCake/search plugin <https://github.com/friendsofcake/search>`_
 
 In this case, it's filtering on the Post name as seen in the filtering form
 and the URL.
