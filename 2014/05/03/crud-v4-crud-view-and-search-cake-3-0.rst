@@ -153,6 +153,8 @@ If you want to discuss the project and how it can be used, feel free to contact 
 on Twitter `@jippi <https://twitter.com/jippi>`_ or come by the Friends Of Cake IRC
 channel on FreeNode: **#FriendsOfCake**.
 
+You should also follow `@FriendsOfCake <https://twitter.com/FriendsOfCake>`_ on twitter.
+
 
 Crud v4 Changelog
 -----------------
