@@ -42,7 +42,7 @@ I've outlined some of the changes that has happened below.
 
 - Added a new CRUD action - `Lookup <https://github.com/FriendsOfCake/crud/blob/cake3/Action/LookupAction.php>`_
   which is useful for things like auto-complete widgets or anything that need
-  a **find('list')** alike output.
+  a **find('list')** like output.
 
 - Configuration has been streamlined, and now uses the **InstanceConfigTrait**
   included in CakePHP 3 - which was extracted from CRUD 3 in the first place.
