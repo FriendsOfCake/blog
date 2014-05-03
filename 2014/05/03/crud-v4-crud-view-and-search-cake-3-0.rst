@@ -32,7 +32,7 @@ Plugin: CRUD View
 As part of the refactoring, I've rebooted the effort to make a CRUD-view project,
 providing the CRUD user with a full blow admin interface when using CRUD.
 
-The code can be found over at GitHub `FriendsOfCake/crud-view <https://github.com/friendsofcake/crud-view/tree/feature/cake3>`_
+The code can be found over at GitHub `FriendsOfCake/crud-view <https://github.com/friendsofcake/crud-view/tree/master>`_
 
 CRUD view is somewhat working, but it still lacks a lot of features, documentation, tests etc.
 
