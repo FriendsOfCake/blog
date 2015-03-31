@@ -38,7 +38,7 @@ CRUD view is somewhat working, but it still lacks a lot of features, documentati
 
 What it does now, is more than the basic scaffolding that has been removed in CakePHP 3.0,
 but the goal for the project is an flexible admin interface, build right into your
-application by simply loading the Crud and Crud View plugins.
+application by simply loading the CRUD and CRUD View plugins.
 
 Index
 ^^^^^
@@ -102,7 +102,7 @@ Note the custom checkbox and date selector, which has been expanded.
 View post
 ^^^^^^^^^
 
-Viewing a single post, with it's related data
+Viewing a single post, with its related data
 
 (Click on the image for larger version)
 
@@ -132,47 +132,47 @@ Simply follow the install instructions in the README
 The future
 ----------
 
-With the public release of both Crud v4, Crud View and Search, I hope that FriendsOfCake
+With the public release of both CRUD v4, CRUD View and Search, I hope that FriendsOfCake
 can help play a positive role in the upcoming CakePHP 3 ecosystem.
 
 I feel like CRUD v4 is mostly stable, and will more or less follow the release cycle
 of CakePHP 3, keeping up with new features and fixes.
 
 CRUD View is still a very young project, and I'm not at all a designer or frontend
-guy, so having someone from the community step up and help there would be amazing.
+guy. So having someone from the community to step up and help there would be amazing.
 
 Search is still very young, and I'm continuously talking with `lorenzo <https://github.com/lorenzo>`_
 on how it can fit best as possible into the new Cake 3 ORM, and the style of Cake3.
 
-The grand plan for the FriendOfCake association on github is to provide a solid
-and common foundation for building CakePHP apps, allowing developers like your self
-to focus on the most important, your application, not boiler plate code or repetitive
+The grand plan for the FriendOfCake association on Github is to provide a solid
+and common foundation for building CakePHP apps, allowing developers like yourself
+to focus on the most important, your application, not on boiler plate code or repetitive
 code tasks.
 
 If you want to discuss the project and how it can be used, feel free to contact me
 on Twitter `@jippi <https://twitter.com/jippi>`_ or come by the Friends Of Cake IRC
 channel on FreeNode: **#FriendsOfCake**.
 
-You should also follow `@FriendsOfCake <https://twitter.com/FriendsOfCake>`_ on twitter.
+You should also follow `@FriendsOfCake <https://twitter.com/FriendsOfCake>`_ on Twitter.
 
 
-Crud v4 Changelog
+CRUD v4 Changelog
 -----------------
 
-I've outlined some of the changes that has happened below.
+Below I've outlined some of the changes that have happened.
 
 While a lot of the internals of CRUD has changed with version 4 of CRUD, most, if
 not all of the public API remains unchanged, making for a fairly smooth upgrade
 path from CakePHP 2.x to CakePHP 3.x in the future if you use CRUD.
 
-- The `documentation`_ has been completely
-  rewritten, and expanded greatly. It's now based on the same sphinx setup as the CakePHP book.
+- The `documentation`_ has been completely rewritten, and expanded greatly.
+  It's now based on the same sphinx setup as the CakePHP book.
   `The new documentation can be found here <http://crud.readthedocs.org/en/latest/>`_
 
-- The code is now fully psr-4 compliant, like CakePHP 3, and assume it will be
+- The code is now fully psr-4 compliant, like CakePHP 3, and assumes it will be
   installed using Composer
 
-- CRUD v4 now have same PHP version requirements as CakePHP 3: PHP 5.4 or newer.
+- CRUD v4 now has the same PHP version requirements as CakePHP 3: PHP 5.4 or newer.
 
 - Most of the `CRUD Action <http://crud.readthedocs.org/en/latest/actions.html>`_ code
   has been extracted into `traits <https://github.com/FriendsOfCake/crud/tree/cake3/Traits>`_,
@@ -180,13 +180,14 @@ path from CakePHP 2.x to CakePHP 3.x in the future if you use CRUD.
   inheritance hierarchy to the build in CRUD actions.
 
 - Added a new CRUD action - `Lookup <https://github.com/FriendsOfCake/crud/blob/cake3/Action/LookupAction.php>`_
-  which is useful for things like auto-complete widgets or anything that need
+  which is useful for things like auto-complete widgets or anything that needs
   a **find('list')** like output.
 
 - Configuration has been streamlined, and now uses the **InstanceConfigTrait**
   included in CakePHP 3 - which was extracted from CRUD 3 in the first place.
 
-- The old **CrudBaseObject** has been replaced with a new `ProxyTrait <https://github.com/FriendsOfCake/crud/blob/cake3/Core/ProxyTrait.php>`_.
+- The old **CrudBaseObject** has been replaced with a new
+  `ProxyTrait <https://github.com/FriendsOfCake/crud/blob/cake3/Core/ProxyTrait.php>`_.
 
 - CRUD Actions and Listeners no longer depend on the CrudComponent to be loaded up
   front. All they need is a Controller instance, which allow for even
@@ -198,12 +199,12 @@ path from CakePHP 2.x to CakePHP 3.x in the future if you use CRUD.
     	   return (new \Crud\Action\AddAction($this, ['viewVar' => 'blog']))->handle();
   	}
 
-  If the CRUD Component is needed, it will be lazy loaded the first time it's accessed
+  If the CRUD Component is needed, it will be lazy loaded the first time it is accessed
   from within the **ProxyTrait**.
 
-- The Crud Event Subject will now be the same for the full duration of the CRUD
+- The CRUD Event Subject will now be the same for the full duration of the CRUD
   request process, rather than a new one for each CRUD event emitted.
-  This allow for better visibility into what events got emitted and handled during
+  This allows for better visibility into what events got emitted and handled during
   the request, and in what order.
 
 - Triggering events using **_trigger()** will now return a **\\Cake\\Event\\Event**
@@ -226,14 +227,14 @@ path from CakePHP 2.x to CakePHP 3.x in the future if you use CRUD.
   trait has been added to aid in testing CRUD actions and listeners, both in the
   CRUD core, but also in your own actions.
 
-- Index Crud Action now responds to all HTTP verbs, not just GET or POST - this
-  allow for easier "search-by-POST" use cases.
+- Index CRUD Action now responds to all HTTP verbs, not just GET or POST - this
+  allows for easier "search-by-POST" use cases.
 
-- View Crud Action now responds to all HTTP verbs, not just GET - this
-  allow for easier usage in edge cases where you need to post to $self for some reason.
+- View CRUD Action now responds to all HTTP verbs, not just GET - this
+  allows for easier usage in edge cases where you need to post to $self for some reason.
 
-- Delete Crud Action now responds to all HTTP verbs, not just POST or DELTE - this
-  allow for easier ways to delete resources.
+- Delete CRUD Action now responds to all HTTP verbs, not just POST or DELTE - this
+  allows for easier ways to delete resources.
 
 .. author:: Christian "Jippi" Winther
 .. categories:: CRUD
